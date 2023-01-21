@@ -91,7 +91,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/TokenStudents.sol": "Vendor"
+			"contracts/TokenStudents.sol": "Token"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -106,11 +106,11 @@
 	},
 	"sources": {
 		"contracts/TokenStudents.sol": {
-			"keccak256": "0xaac386ce5f9f14a882ad4bc3b7002e689c48bb65947eafaef7d053f8e2e14439",
+			"keccak256": "0x7cd7113090468108ecc317afac0a4088bb8d44d529fdb2526b184ebb8d1bd440",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://706e5fa4b637cdfd45ae0318165a8ca91a93d0b8848ce40ac49d82fdb1c5817f",
-				"dweb:/ipfs/QmdzTM8LQRerQ9sFLnuXDrdACLchWNywNnKgiZv1rTrGz4"
+				"bzz-raw://b20bdc2379136ccdef85d813c3c11ab152c55057000ecbf0a094b47988943ef9",
+				"dweb:/ipfs/Qmcxi6GtS2t2eo5cnf8HmiKrjpKatk1HkPQWYdTiXZFpPj"
 			]
 		}
 	},
