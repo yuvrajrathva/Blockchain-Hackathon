@@ -6,7 +6,13 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_administratorAddress",
+						"type": "address"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
@@ -25,25 +31,12 @@
 			},
 			{
 				"inputs": [],
-				"name": "admin",
+				"name": "administrator",
 				"outputs": [
 					{
 						"internalType": "address",
 						"name": "",
 						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "adminTokenBalance",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -66,26 +59,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "currentYear",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "expire",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -156,9 +129,40 @@
 						"type": "uint256"
 					}
 				],
-				"name": "pay",
+				"name": "payToStudent",
 				"outputs": [],
 				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_whereToPay",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_howMuchPay",
+						"type": "uint256"
+					}
+				],
+				"name": "payToVendor",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_removeRewardAddress",
+						"type": "address"
+					}
+				],
+				"name": "removeRewards",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -181,33 +185,8 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "transaction",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "vendorMap",
+				"inputs": [],
+				"name": "rewardsArrayLength",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -265,20 +244,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/IssueTokens.sol": {
-			"keccak256": "0x2bc0329e0c23154a0b0e6e3ef254559a87700285a14d7824160ec4c9e0a0d008",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://9c1dc412a6fedd43b4923015ae01e45542e737fb37d1d379e59b8c167928eaef",
-				"dweb:/ipfs/QmUHA7kwcWG2UPmmrNESx5GMxqTKtrB2nKdrRbYByPLt26"
-			]
-		},
 		"contracts/TokenStudents.sol": {
-			"keccak256": "0xd6d900b1b2cda9edc6d32705cbb02307017a4e024db8631aedf3843175cfe121",
+			"keccak256": "0x024aec42db5431ce76f7b2b068cba2cbbee39d6fd49336af93c93b3282a13699",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d4d3fe1f54a2d48d232ea8f02869404b42b2e222ed7d910efeee7dc5a34dcb0a",
-				"dweb:/ipfs/QmPfDfvMJnK1uiJjnmt1ADdw3N34wqbmWi8QowBrqgxBcJ"
+				"bzz-raw://91dae728618939d6078e9dc6fa00db9c324006fd24bba440c7957023249d9168",
+				"dweb:/ipfs/QmZzvvqHjoC3X9ydydbGsno6xdLuJbkMTqmZwaFVjwuXwq"
 			]
 		}
 	},

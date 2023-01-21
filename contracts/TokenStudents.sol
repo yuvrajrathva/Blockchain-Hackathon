@@ -2,6 +2,19 @@
 pragma solidity ^0.8.0;
 
 contract TokenStudents {
+    constructor (address _administratorAddress){
+        admin = msg.sender;
+        administrator = _administratorAddress;
+    }
+    modifier onlyAdmin{
+        require(msg.sender == admin, "Sorry! only admin can issue");
+        _;
+    }
+    modifier onlyAdministrator{
+        require(msg.sender == administrator, "Sorry! only administrator can modify");
+        _;
+    }
+
     // Issue new ID Card
     mapping(address => uint) public idCardMap;
     mapping(address => uint) public yearMap;
@@ -13,43 +26,35 @@ contract TokenStudents {
 
     // Send Tokens from Admin to Student
     address immutable admin;
-    constructor (){
-        admin = msg.sender;
-    }
-    modifier onlyAdmin{
-        require(msg.sender == admin, "Sorry! only admin can issue");
-        _;
-    }
+    address public immutable administrator;
+    
     function issueTokens(address _studentAddress, uint _tokensNumber) public onlyAdmin{ 
         if(checkStudent(_studentAddress) == true){
             idCardMap[_studentAddress] += _tokensNumber;    //giving n tokens to address of students
         }
     }
     
-    // List of rewards
+    // Manage list of rewards
     address[] public rewardsArray;
-    address public administrator;
 
-    modifier onlyAdministrator{
-        require(msg.sender == administrator, "Sorry! only administrator can modify");
-        _;
+    function rewardsArrayLength() public view returns(uint){
+        return rewardsArray.length;
     }
+
     function addRewards(address _newRewardAddress) public onlyAdministrator{
         rewardsArray.push(_newRewardAddress);
     }
     function removeRewards(address _removeRewardAddress) public onlyAdministrator{
         for(uint i=0; i<rewardsArray.length; i++){
             if(rewardsArray[i] == _removeRewardAddress){
-                rewardsArray[i] == rewardsArray[rewardsArray.length-1];
+                rewardsArray[i] = rewardsArray[rewardsArray.length-1];
                 rewardsArray.pop();
             }
         }
     }
 
     // Pay using Tokens
-    mapping(address => uint) public vendorMap;
-
-    function checkStudent(address checkAddress) private view returns(bool){    //doubt what is value of not existing address?
+    function checkStudent(address checkAddress) public view returns(bool){    //doubt what is value of not existing address?
         if(yearMap[checkAddress] > 0) {
             return true;
         }
@@ -63,12 +68,11 @@ contract TokenStudents {
         for(uint i=0 ; i<rewardsArray.length ; i++){
             if(_whereToPay == rewardsArray[i]){
                idCardMap[msg.sender] -= _howMuchPay;
-               vendorMap[_whereToPay] += _howMuchPay; 
             }
         }
     }
 
-    function payToStudent(address _whereToPay, uint _howMuchPay) public payable{
+    function payToStudent(address _whereToPay, uint _howMuchPay) public payable {
         require(idCardMap[msg.sender] - _howMuchPay >= 0,"not enough tokens");
         if(checkStudent(_whereToPay) == true){
             if(yearMap[_whereToPay] != yearMap[msg.sender]){
@@ -85,6 +89,9 @@ contract TokenStudents {
     }
 
     // function to expire the tokens
+
+
+    // function to store transaction id
    
 
 
