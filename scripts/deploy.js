@@ -10,11 +10,14 @@ const hre = require("hardhat");
 // require("@nomiclabs/hardhat-waffle");
 
 async function main() {
-  const Vendor = await hre.ethers.getContractFactory('Vendor');
-  const contract = await Vendor.deploy();
+  const IssueTokens = await hre.ethers.getContractFactory('IssueTokens');
+  const TokenStudents = await hre.ethers.getContractFactory('TokenStudents');
+  const contract1 = await IssueTokens.deploy();
+  const contract2 = await TokenStudents.deploy();
   
-  await contract.deployed();
-  console.log("Address of contract:", contract.address );
+  await contract1.deployed();
+  await contract2.deployed();
+  console.log("Address of contract:", contract1.address , contract2.address);
 
 }
 
