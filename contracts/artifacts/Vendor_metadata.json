@@ -91,7 +91,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/TokenStudents.sol": "Vendor"
+			"contracts/Vendor.sol": "Vendor"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -105,7 +105,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/TokenStudents.sol": {
+		"contracts/Vendor.sol": {
 			"keccak256": "0xaac386ce5f9f14a882ad4bc3b7002e689c48bb65947eafaef7d053f8e2e14439",
 			"license": "MIT",
 			"urls": [
