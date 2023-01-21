@@ -82,6 +82,13 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "expire",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -267,11 +274,11 @@
 			]
 		},
 		"contracts/TokenStudents.sol": {
-			"keccak256": "0xd707b7c7bbd36fc7f819675f2e00df6db21d8c31ae6e3d1ab5363a5f1a968049",
+			"keccak256": "0xd6d900b1b2cda9edc6d32705cbb02307017a4e024db8631aedf3843175cfe121",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://036e0a866e7670403490b1f39a6b26098912aa199291cf82e49ee3cc6427a652",
-				"dweb:/ipfs/QmQkJjQEpGqkZMZBVEEKtrbcd9jbZwGgNrPzLnHi3fZ3BM"
+				"bzz-raw://d4d3fe1f54a2d48d232ea8f02869404b42b2e222ed7d910efeee7dc5a34dcb0a",
+				"dweb:/ipfs/QmPfDfvMJnK1uiJjnmt1ADdw3N34wqbmWi8QowBrqgxBcJ"
 			]
 		}
 	},
