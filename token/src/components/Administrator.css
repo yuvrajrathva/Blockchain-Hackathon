@@ -1,116 +1,88 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
-.administator-container{
-  background: #fff;
-  max-width: 400px;
-  width: 100%;
-  margin: 120px auto;
-  padding: 25px;
-  border-radius: 5px;
-  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+.container {
+  width: 500px;
+  margin: 20px auto;
 }
-.administator-container header{
-  font-size: 30px;
-  font-weight: 600;
-}
-.administator-container .administrator-input{
-  margin: 20px 0;
-  width: 100%;
+.form {
+  backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+  border-radius: 6px;
+  padding: 20px;
   display: flex;
-  height: 45px;
-}
-.administrator-input input{
-  width: 85%;
-  height: 100%;
-  outline: none;
-  border-radius: 3px;
-  border: 1px solid #ccc;
-  font-size: 17px;
-  padding-left: 15px;
-  transition: all 0.3s ease;
-}
-.administrator-input input:focus{
-  border-color: #8E49E8;
-}
-.administrator-input button{
-  width: 50px;
-  height: 100%;
-  border: none;
-  color: #fff;
-  margin-left: 5px;
-  font-size: 21px;
-  outline: none;
-  background: #bc21e0;
-  cursor: pointer;
-  border-radius: 3px;
-  opacity: 0.6;
-  pointer-events: none;
-  transition: all 0.3s ease;
-}
-.administrator-input button:hover,
-.administrator-input button:hover{
-  background: #bc21e0;
-}
-.administrator-input button.active{
-  opacity: 1;
-  pointer-events: auto;
-}
-.administator-container .todoList{
-  max-height: 250px;
-  overflow-y: auto;
-}
-.todoList li{
-  position: relative;
-  list-style: none;
-  margin-bottom: 8px;
-  background: #f2f2f2;
-  border-radius: 3px;
-  padding: 10px 15px;
-  cursor: default;
-  overflow: hidden;
-  word-wrap: break-word;
-}
-.todoList li .icon{
-  position: absolute;
-  right: -45px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #e74c3c;
-  width: 45px;
-  text-align: center;
-  color: #fff;
-  padding: 10px 15px;
-  border-radius: 0 3px 3px 0;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-.todoList li:hover .icon{
-  right: 0px;
-}
-.administator-container .administrator-input{
-  display: flex;
-  width: 100%;
-  margin-top: 20px;
   align-items: center;
-  justify-content: space-between;
 }
-.administrator-input button{
-  padding: 6px 10px;
-  border-radius: 3px;
-  border: none;
+.input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  flex: 1;
+}
+.input:focus,
+.add:focus {
   outline: none;
-  color: #fff;
-  font-weight: 400;
-  font-size: 16px;
-  margin-left: 5px;
-  background: #bc21e0;
-  cursor: pointer;
-  user-select: none;
-  opacity: 0.6;
-  pointer-events: none;
-  transition: all 0.3s ease;
 }
-.administrator-input button.active{
-  opacity: 1;
-  pointer-events: auto;
+.add {
+  border: none;
+  background-color: #ffffff;
+    color: #080710;
+  padding: 10px;
+  border-radius: 6px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.tasks {
+  backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+  margin-top: 20px;
+  border-radius: 6px;
+  padding: 20px;
+}
+.tasks .task {
+  backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+.tasks .task:not(:last-child) {
+  margin-bottom: 15px;
+}
+.tasks .task:hover {
+  background-color: #ccc;
+}
+.tasks .task.done {
+  opacity: 0.5;
+  position: relative;
+}
+.task.done::after {
+  position: absolute;
+  content: "";
+}
+.tasks .task span {
+  font-weight: bold;
+  font-size: 10px;
+  background-color: #ffffff;
+  color: #080710;
+  padding: 2px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.delete-all {
+  width: calc(100% - 25px);
+  margin: auto;
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #080710;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 4px;
 }

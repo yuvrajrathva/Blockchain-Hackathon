@@ -1,4 +1,4 @@
-.admin-container    form{
+.student-container    form{
     height: fit-content;
     width: fit-content;
     min-width: 500px;
@@ -13,34 +13,34 @@
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
     padding: 50px 50px;
 }
-.admin-container  form label{
+.student-container  form label{
     font-family: 'Poppins',sans-serif;
     color: #ffffff;
     letter-spacing: 0.5px;
     outline: none;
     border: none;
 }
-.admin-container  form *{
+.student-container  form *{
     /* font-family: 'Poppins',sans-serif;
     color: #ffffff; */
     letter-spacing: 0.5px;
     outline: none;
     border: none;
 }
-.admin-container form h3{
+.student-container    form h3{
     font-size: 32px;
     font-weight: 500;
     line-height: 42px;
     text-align: center;
 }
 
-.admin-container label{
+.student-container label{
     display: block;
     margin-top: 30px;
     font-size: 16px;
     font-weight: 500;
 }
-.admin-container input{
+.student-container input{
     display: block;
     height: 50px;
     width: 100%;
@@ -54,8 +54,8 @@
 ::placeholder{
     color: #e5e5e5;
 }
-.admin-container button{
-    margin-top: 50px;
+.student-container button{
+    margin-top: 10px;
     width: 100%;
     background-color: #ffffff;
     color: #080710;

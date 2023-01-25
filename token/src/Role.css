@@ -17,6 +17,7 @@ html{
   height: 60%;
   margin: 100px auto;
   background-color: #FFFFFF;
+  backdrop-filter: blur(10px);
   border-radius: 10px;
   padding: 50px;
 }
