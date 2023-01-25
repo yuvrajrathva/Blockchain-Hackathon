@@ -1,8 +1,14 @@
 import IssueTokensABI from "./contract/IssueTokens.json";
 import IssueTokensABIdbg from "./contract/IssueTokens.dbg.json";
 import TokenStudentsABI from "./contract/TokenStudents.json";
+import { Route, Routes } from "react-router-dom";
 import {useState, useEffect} from 'react';
-import { ethers } from "ethers";
+// import { ethers } from "ethers";
+import Role from "./Role";
+import Error from "./Error";
+import Administrator from "./components/Administrator";
+import Admin from "./components/Admin";
+import Student from "./components/Student";
 import Signup from "./components/signup";
 import Home from "./components/home";
 import './App.css';
@@ -43,15 +49,15 @@ function App() {
           //   window.location.reload();
           // });
           console.log(contractABI)
-          const provider = new ethers.providers.Web3Provider(ethereum);
-          const signer = provider.getSigner();
-          const contract = new ethers.Contract(
-            contractAddress,
-            contractABI,
-            signer
-          );
+          // const provider = new ethers.providers.Web3Provider(ethereum);
+          // const signer = provider.getSigner();
+          // const contract = new ethers.Contract(
+          //   contractAddress,
+          //   contractABI,
+          //   signer
+          // );
           setAccount(account);
-          setState({ provider, signer, contract });
+          // setState({ provider, signer, contract });
         // } else {
           // alert("Please install metamask");
         // }
@@ -69,8 +75,15 @@ function App() {
 
   return (
     <div className="App">
+      <Routes>
+        <Route path="/" element={<Role />} />
+        <Route path="/*" element={<Error />} />  
+        <Route path="/administrator" element={<Administrator />} />  
+        <Route path="/admin" element={<Admin />} />  
+        <Route path="/student" element={<Student />} />  
+      </Routes>
       {/* <Home state={ state } /> */}
-       <Signup state={state} />
+      {/* <Signup state={state} /> */}
     </div>
   );
 }

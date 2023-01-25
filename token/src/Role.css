@@ -11,51 +11,54 @@ html{
 }
 
 #loginform{
-  max-width: 500px;
-  min-width: 300px;
-  max-height: 700px;
+  width: 500px;
+  height: 100%;
   width: 30%;
   height: 60%;
   margin: 100px auto;
   background-color: #FFFFFF;
-  border-radius: 25px;
+  border-radius: 10px;
   padding: 50px;
 }
 
 #headerTitle{
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 39px;
+  color: #333333;
+  line-height: 1.2;
   text-align: center;
-  font-family: 'open sans', sans-serif;
-  padding: 2rem 0;
-  margin: 0;
-  font-size: 2rem;
 }
 
 .row{
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 100%;
+  width: 100%;
 }
 
 .row button{
+  width: 100%;
+  height: 50px;
+  font-family: Poppins-Medium;
+  font-size: 16px;
   border-radius: 25px;
-  width: 60%;
-  height: 40px;
-  font-size: 1.3rem;
-  color: white;
-  font-weight: 700;
-  background: #a64bf4;  
-  background: -webkit-linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
-  background: -o-linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
-  background: -moz-linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
-  background: linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
-  border: 0px;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
   cursor: pointer;
-  transition: opacity 0.25s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  background: -webkit-linear-gradient(right, #fc00ff, #00dbde);
+   -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
 }
-
 .row button:hover{
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 #button{

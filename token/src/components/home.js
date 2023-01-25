@@ -1,4 +1,4 @@
-import { ethers } from "ethers";
+// import { ethers } from "ethers";
 const Home = ({state}) => {
     const optionChoose = async (i) => {
         i.preventDefault();

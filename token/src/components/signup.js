@@ -1,4 +1,4 @@
-import { ethers } from "ethers";
+// import { ethers } from "ethers";
 const Signup = ({state}) => {
     const idCreate = async (i) => {
         i.preventDefault();
