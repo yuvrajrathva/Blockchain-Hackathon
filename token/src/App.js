@@ -12,6 +12,21 @@ import Student from "./components/Student";
 import Signup from "./components/signup";
 import Home from "./components/home";
 import './App.css';
+import Web3 from 'web3';
+import TokenStudent from './contract/TokenStudents.json';
+const getWeb3 = () =>{
+  return new Web3('');
+}
+const getContract = async web3 => {
+  const networkId = await web3.eth.net.getId();
+  const network =  TokenStudent.network[networkId];
+  return new web3.eth.Contract(
+    TokenStudent.abi,
+    network && network.address
+  )
+}
+
+
 
 function App() {
   const [state, setState] = useState({
